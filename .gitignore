@@ -1,0 +1,4 @@
+# The following files/folders will not be copied to the container
+node_modules
+.eslint*
+package-lock.json

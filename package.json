@@ -1,0 +1,19 @@
+{
+  "name": "nodocker-compose",
+  "version": "1.0.0",
+  "description": "aggregate outputs of multiple containers in a single stream",
+  "type": "module",
+  "scripts": {
+      "start": "./compose.sh"
+  },
+  "dependencies":{
+    "@mulekick/file-streamer": "^1.0.5"
+  },
+  "engines": {
+    "node": ">= 16.13.2",
+    "npm": ">= 8.7.0"
+  },
+  "author": "mulekick <moolekick@gmail.com> (https://github.com/mulekick)",
+  "license": "MIT"
+}
+  
