@@ -1,7 +1,7 @@
 # Use an official node.js runtime as a parent image
 FROM node:16.13-bullseye-slim
 
-# create /src directory, install busybox
+# create /src directory
 RUN mkdir /src
 
 # Set the working directory to /src
@@ -13,5 +13,5 @@ COPY . /src/
 # override shell
 SHELL [ "/bin/bash", "-cli" ]
 
-# clean bash + node script reading pipe
+# start node process
 CMD [ "node", "tick.js" ]
