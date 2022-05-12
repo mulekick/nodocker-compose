@@ -1,4 +1,5 @@
 # The following files/folders will not be copied to the container
+.vscode
 node_modules
 .eslint*
 package-lock.json

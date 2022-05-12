@@ -18,7 +18,6 @@ import {fileStreamer} from "@mulekick/file-streamer";
             .on(`reading`, () => console.debug(`file streamer: reading file contents ...`))
             .on(`paused`, () => console.debug(`file streamer: reading paused.`))
             .on(`stopped`, () => console.debug(`file streamer: reading stopped.`))
-            .on(`closed`, () => console.debug(`file streamer: file closed.`))
             // mandatory error event handler for EventEmitter (stack trace + exit if missing)
             .on(`error`, err => console.debug(`error: file streamer emitted ${ err.message }.`));
 
@@ -43,13 +42,6 @@ import {fileStreamer} from "@mulekick/file-streamer";
 
         // close
         await streamer.promise(`close`);
-
-        // done
-        console.debug(`exiting process.`);
-
-        // force exit to discard the contents of job queue and message queue
-        // will try to fix that for real later ...
-        process.exit(0);
 
     } catch (err) {
         // write to stderr
