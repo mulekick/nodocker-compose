@@ -4,3 +4,4 @@ node_modules
 compose.js
 compose.sh
 package*.json
+LICENSE

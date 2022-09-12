@@ -1,5 +1,8 @@
-# The following files/folders will not be copied to the container
-.vscode
+# exclude node modules
 node_modules
-.eslint*
+# exclude package-lock.json
 package-lock.json
+# exclude eslint config
+.eslint*
+# exclude debug configuration
+.vscode
